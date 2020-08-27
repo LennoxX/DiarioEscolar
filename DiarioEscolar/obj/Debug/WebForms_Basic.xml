@@ -1,0 +1,851 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+DiarioEscolar
+</name>
+</assembly>
+<members>
+<member name="T:DiarioEscolar.My.MyWebExtension">
+ <summary>
+ Módulo usado para definir as propriedades que estão disponíveis em My Namespace para projetos da web.
+ </summary>
+ <remarks></remarks>
+</member>
+<member name="P:DiarioEscolar.My.MyWebExtension.Computer">
+ <summary>
+ Retorna informações sobre o computador host.
+ </summary>
+</member>
+<member name="P:DiarioEscolar.My.MyWebExtension.User">
+ <summary>
+ Retorna informações sobre o usuário atual da web.
+ </summary>
+</member>
+<member name="P:DiarioEscolar.My.MyWebExtension.Request">
+ <summary>
+ Retorna um objeto Request.
+ </summary>
+</member>
+<member name="P:DiarioEscolar.My.MyWebExtension.Response">
+ <summary>
+ Retorna um objeto Response.
+ </summary>
+</member>
+<member name="P:DiarioEscolar.My.MyWebExtension.Log">
+ <summary>
+ Retorna o objeto de log Asp.
+ </summary>
+</member>
+<member name="F:DiarioEscolar.frmAluno._txtNome">
+<summary>
+Controle txtNome.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAluno._txtNomeExibicao">
+<summary>
+Controle txtNomeExibicao.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAluno._txtMatricula">
+<summary>
+Controle txtMatricula.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAluno._txtEmail">
+<summary>
+Controle txtEmail.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAluno._dtNascimento">
+<summary>
+Controle dtNascimento.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAluno._txtSituacao">
+<summary>
+Controle txtSituacao.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAluno._btnSalvar">
+<summary>
+Controle btnSalvar.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAluno._lblRegistros">
+<summary>
+Controle lblRegistros.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAluno._grdAluno">
+<summary>
+Controle grdAluno.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAlunoTurma._txtNomeEscola">
+<summary>
+Controle txtNomeEscola.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAlunoTurma._drpAluno">
+<summary>
+Controle drpAluno.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAlunoTurma._lblMatricula">
+<summary>
+Controle lblMatricula.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAlunoTurma._txtMatricula">
+<summary>
+Controle txtMatricula.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAlunoTurma._lblNomeAluno">
+<summary>
+Controle lblNomeAluno.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAlunoTurma._txtNomeAluno">
+<summary>
+Controle txtNomeAluno.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAlunoTurma._lblDtNascimento">
+<summary>
+Controle lblDtNascimento.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAlunoTurma._dtNascimento">
+<summary>
+Controle dtNascimento.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAlunoTurma._btnSalvar">
+<summary>
+Controle btnSalvar.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAlunoTurma._lblRegistros">
+<summary>
+Controle lblRegistros.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAlunoTurma._grdAlunos">
+<summary>
+Controle grdAlunos.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmDisciplina._txtDisciplina">
+<summary>
+Controle txtDisciplina.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmDisciplina._btnSalvar">
+<summary>
+Controle btnSalvar.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmDisciplina._lblRegistros">
+<summary>
+Controle lblRegistros.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmDisciplina._grdDisciplina">
+<summary>
+Controle grdDisciplina.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmEscola._txtNomeEscola">
+<summary>
+Controle txtNomeEscola.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmEscola._txtMec">
+<summary>
+Controle txtMec.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmEscola._drpCidade">
+<summary>
+Controle drpCidade.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmEscola._drpSituacao">
+<summary>
+Controle drpSituacao.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmEscola._btnSalvar">
+<summary>
+Controle btnSalvar.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmEscola._lblRegistros">
+<summary>
+Controle lblRegistros.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmEscola._grdEscolas">
+<summary>
+Controle grdEscolas.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmMatriz._txtNomeEscola">
+<summary>
+Controle txtNomeEscola.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmMatriz._drpEtapaEnsino">
+<summary>
+Controle drpEtapaEnsino.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmMatriz._drpPeriodoLetivo">
+<summary>
+Controle drpPeriodoLetivo.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmMatriz._btnSalvar">
+<summary>
+Controle btnSalvar.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmMatriz._lblRegistros">
+<summary>
+Controle lblRegistros.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmMatriz._grdMatriz">
+<summary>
+Controle grdMatriz.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmPeriodoLetivo._txtNomeEscola">
+<summary>
+Controle txtNomeEscola.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmPeriodoLetivo._txtNomePeriodo">
+<summary>
+Controle txtNomePeriodo.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmPeriodoLetivo._txtDescricaoPeriodo">
+<summary>
+Controle txtDescricaoPeriodo.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmPeriodoLetivo._btnSalvar">
+<summary>
+Controle btnSalvar.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmPeriodoLetivo._lblRegistros">
+<summary>
+Controle lblRegistros.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmPeriodoLetivo._grdPeriodos">
+<summary>
+Controle grdPeriodos.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmProfessor._txtNome">
+<summary>
+Controle txtNome.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmProfessor._txtNomeExibicao">
+<summary>
+Controle txtNomeExibicao.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmProfessor._txtMatricula">
+<summary>
+Controle txtMatricula.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmProfessor._txtEmail">
+<summary>
+Controle txtEmail.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmProfessor._dtNascimento">
+<summary>
+Controle dtNascimento.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmProfessor._txtSituacao">
+<summary>
+Controle txtSituacao.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmProfessor._btnSalvar">
+<summary>
+Controle btnSalvar.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmProfessor._lblRegistros">
+<summary>
+Controle lblRegistros.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmProfessor._grdProfessor">
+<summary>
+Controle grdProfessor.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmProfessorTurma._txtNomeEscola">
+<summary>
+Controle txtNomeEscola.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmProfessorTurma._drpAluno">
+<summary>
+Controle drpAluno.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmProfessorTurma._lblMatricula">
+<summary>
+Controle lblMatricula.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmProfessorTurma._txtMatricula">
+<summary>
+Controle txtMatricula.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmProfessorTurma._lblNomeAluno">
+<summary>
+Controle lblNomeAluno.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmProfessorTurma._txtNomeAluno">
+<summary>
+Controle txtNomeAluno.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmProfessorTurma._lblDtNascimento">
+<summary>
+Controle lblDtNascimento.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmProfessorTurma._dtNascimento">
+<summary>
+Controle dtNascimento.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmProfessorTurma._btnSalvar">
+<summary>
+Controle btnSalvar.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmProfessorTurma._lblRegistros">
+<summary>
+Controle lblRegistros.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmProfessorTurma._grdProfessores">
+<summary>
+Controle grdProfessores.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmTurma._txtNomeEscola">
+<summary>
+Controle txtNomeEscola.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmTurma._drpMatriz">
+<summary>
+Controle drpMatriz.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmTurma._txtDescricao">
+<summary>
+Controle txtDescricao.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmTurma._btnCancelar">
+<summary>
+Controle btnCancelar.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmTurma._btnSalvar">
+<summary>
+Controle btnSalvar.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmTurma._lblRegistros">
+<summary>
+Controle lblRegistros.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmTurma._grdTurmas">
+<summary>
+Controle grdTurmas.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.infoEscola._txtNomeEscola">
+<summary>
+Controle txtNomeEscola.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.infoEscola._txtNome">
+<summary>
+Controle txtNome.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.infoEscola._txtMec">
+<summary>
+Controle txtMec.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.infoEscola._txtCidade">
+<summary>
+Controle txtCidade.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.infoEscola._txtSituacao">
+<summary>
+Controle txtSituacao.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.infoEscola._btnPeriodoLetivo">
+<summary>
+Controle btnPeriodoLetivo.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.infoEscola._btnMatriz">
+<summary>
+Controle btnMatriz.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.infoEscola._btnTurma">
+<summary>
+Controle btnTurma.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.SiteMaster._ctrTopo">
+<summary>
+Controle ctrTopo.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.SiteMaster._ctrMenu">
+<summary>
+Controle ctrMenu.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.SiteMaster._crtMensagens">
+<summary>
+Controle crtMensagens.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.SiteMaster._MainContent">
+<summary>
+Controle MainContent.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.SiteMaster._ctrRodape">
+<summary>
+Controle ctrRodape.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.Site_Mobile._Head1">
+<summary>
+controle Head1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.Site_Mobile._HeadContent">
+<summary>
+Controle HeadContent.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.Site_Mobile._form1">
+<summary>
+Controle form1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.Site_Mobile._FeaturedContent">
+<summary>
+Controle FeaturedContent.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.Site_Mobile._MainContent">
+<summary>
+Controle MainContent.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.Site_Mobile._ViewSwitcher1">
+<summary>
+controle ViewSwitcher1.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Para modificar, mova a declaração de campo do arquivo do designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.WebUserControl1._btnLogout">
+<summary>
+Controle btnLogout.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+</members>
+</doc>
