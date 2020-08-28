@@ -43,29 +43,29 @@
         Dim objProfessor As New Professor
         Dim objEquipeProfessor As New EquipeProfessor
 
-        With drpAluno
+        With drpProfessor
             .DataValueField = "CODIGO"
             .DataTextField = "DESCRICAO"
             .DataSource = objProfessor.ObterTabela()
             .DataBind()
 
-            If TypeOf drpAluno Is DropDownList Then
+            If TypeOf drpProfessor Is DropDownList Then
                 .Items.Insert(0, New ListItem("Selecione...", 0))
             End If
         End With
 
         For Each row As DataRow In objEquipeProfessor.Pesquisar(ViewState("idTurma")).Rows
 
-            drpAluno.Items.Remove(drpAluno.Items.FindByValue(row("EE03_ID_ALUNO")))
+            drpProfessor.Items.Remove(drpProfessor.Items.FindByValue(row("EE02_ID_PROFESSOR")))
         Next
 
 
     End Sub
 
-    Protected Sub drpAluno_SelectedIndexChanged(sender As Object, e As EventArgs)
+    Protected Sub drpProfessor_SelectedIndexChanged(sender As Object, e As EventArgs)
         Dim objProfessor As Professor
-        If (drpAluno.SelectedIndex <> 0) Then
-            objProfessor = New Professor(drpAluno.SelectedValue)
+        If (drpProfessor.SelectedIndex <> 0) Then
+            objProfessor = New Professor(drpProfessor.SelectedValue)
             lblNomeAluno.Visible = True
             txtNomeAluno.Text = objProfessor.Nome
             txtNomeAluno.Visible = True
@@ -88,7 +88,7 @@
     End Sub
 
     Private Sub LimparCampos()
-        drpAluno.ClearSelection()
+        drpProfessor.ClearSelection()
         lblNomeAluno.Visible = False
         txtNomeAluno.Text = ""
         txtNomeAluno.Visible = False
@@ -102,5 +102,71 @@
         dtNascimento.Text = ""
 
         btnSalvar.Enabled = False
+    End Sub
+
+    Protected Sub btnSalvar_Click(sender As Object, e As EventArgs)
+        Salvar()
+        LimparCampos()
+        CarregarGrid()
+        CarregarComboProfessores()
+    End Sub
+
+    Private Sub Salvar()
+        Dim objEquipeProfessor As New EquipeProfessor
+
+
+        With objEquipeProfessor
+            .CodigoProfessor = drpProfessor.SelectedValue
+            .CodigoEquipeEscola = ViewState("idTurma")
+            .Salvar()
+        End With
+        MsgBox(eTipoMensagem.SALVAR_SUCESSO)
+
+
+        objEquipeProfessor = Nothing
+    End Sub
+
+    Protected Sub grdProfessores_RowCommand(sender As Object, e As GridViewCommandEventArgs) Handles grdProfessores.RowCommand
+        If e.CommandName = "" Then
+            Response.Redirect(Request.Url.ToString)
+        ElseIf e.CommandName = "EXCLUIR" Then
+            Excluir(grdProfessores.DataKeys(e.CommandArgument).Item(0))
+        End If
+    End Sub
+
+    Private Sub Excluir(CodigoEquipeProfessor As Object)
+
+        Dim objEquipeProfessor As New EquipeProfessor
+        If objEquipeProfessor.Excluir(CodigoEquipeProfessor) > 0 Then
+            MsgBox(eTipoMensagem.EXCLUIR_SUCESSO)
+        Else
+            MsgBox(eTipoMensagem.EXCLUIR_ERRO)
+        End If
+        CarregarGrid()
+        CarregarComboProfessores()
+    End Sub
+
+    Protected Sub grdProfessores_RowDataBound(sender As Object, e As GridViewRowEventArgs) Handles grdProfessores.RowDataBound
+        Select Case e.Row.RowType
+
+            Case DataControlRowType.DataRow
+
+                Dim lnkExcluirProfessor As New LinkButton
+                lnkExcluirProfessor = DirectCast(e.Row.Cells(2).FindControl("lnkExcluirProfessor"), LinkButton)
+                lnkExcluirProfessor.CommandArgument = e.Row.RowIndex
+
+
+        End Select
+    End Sub
+
+    Protected Sub grdProfessores_PageIndexChanging(sender As Object, e As GridViewPageEventArgs) Handles grdProfessores.PageIndexChanging
+        grdProfessores.PageIndex = e.NewPageIndex
+        CarregarGrid()
+    End Sub
+
+    Protected Sub grdProfessores_Sorting(sender As Object, e As GridViewSortEventArgs) Handles grdProfessores.Sorting
+        ViewState("OrderByDirection") = IIf(ViewState("OrderByDirection") = "asc", "desc", "asc")
+        ViewState("OrderBy") = e.SortExpression & " " & ViewState("OrderByDirection")
+        CarregarGrid()
     End Sub
 End Class

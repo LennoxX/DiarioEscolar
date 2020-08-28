@@ -70,7 +70,7 @@
                             <asp:BoundField DataField="EE03_NM_NOME" SortExpression="EE03_NM_NOME" HeaderText="Nome" />
                             <asp:TemplateField HeaderText="" SortExpression="" Visible="true" ItemStyle-HorizontalAlign="Center" HeaderStyle-CssClass="text-center">
                                 <ItemTemplate>                                                                       
-                                    <asp:LinkButton ID="lnkExcluirAluno" runat="server" class="btn btn-md btn-danger" CommandName="EXCLUIR" ToolTip="Excluir Turma">
+                                    <asp:LinkButton ID="lnkExcluirAluno" runat="server" class="btn btn-md btn-danger" CommandName="EXCLUIR" ToolTip="Excluir Aluno">
                                             <i runat="server" class="fa fa-trash-alt"></i>
                                     </asp:LinkButton>
                                 </ItemTemplate>

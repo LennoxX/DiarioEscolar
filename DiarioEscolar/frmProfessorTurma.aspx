@@ -30,7 +30,7 @@
                     <div class="form-group row">
                         <div class="col-sm-6">
                             <label>Professor</label>
-                            <asp:DropDownList OnSelectedIndexChanged="drpAluno_SelectedIndexChanged" AutoPostBack="true" DataTextField="DESCRICAO" DataValueField="CODIGO" runat="server" required="required" ID="drpAluno" class="form-control" name="Matriz">
+                            <asp:DropDownList OnSelectedIndexChanged="drpProfessor_SelectedIndexChanged" AutoPostBack="true" DataTextField="DESCRICAO" DataValueField="CODIGO" runat="server" required="required" ID="drpProfessor" class="form-control" name="Matriz">
                             </asp:DropDownList>
                         </div>
                       
@@ -53,7 +53,7 @@
                 </div>
                 <div class="card-footer">
                     
-                    <asp:Button runat="server" ID="btnSalvar" CssClass="btn btn-lg btn-success float-right" Enabled="false" Text="Salvar" />
+                    <asp:Button runat="server" OnClick="btnSalvar_Click" ID="btnSalvar" CssClass="btn btn-lg btn-success float-right" Enabled="false" Text="Salvar" />
                 </div>
             </div>
 
@@ -61,7 +61,7 @@
                 <div class="card-body">
 
                     <asp:Label ID="lblRegistros" runat="server" CssClass="badge bg-cyan" />
-                    <asp:GridView ID="grdProfessores" runat="server" CssClass="table table-bordered" PagerStyle-HorizontalAlign="Right" AllowPaging="True" PageSize="2" AutoGenerateColumns="False" DataKeyNames="EE04_ID_EQUIPE_PROFESSOR" AllowSorting="True">
+                    <asp:GridView ID="grdProfessores" runat="server" CssClass="table table-bordered" PagerStyle-HorizontalAlign="Right" AllowPaging="True" PageSize="1" AutoGenerateColumns="False" DataKeyNames="EE04_ID_EQUIPE_PROFESSOR" AllowSorting="True">
                         <HeaderStyle CssClass="bg-white" ForeColor="Black" />
                         <Columns>
                                                     
@@ -69,7 +69,7 @@
                             <asp:BoundField DataField="EE02_NM_NOME" SortExpression="EE02_NM_NOME" HeaderText="Nome" />
                             <asp:TemplateField HeaderText="" SortExpression="" Visible="true" ItemStyle-HorizontalAlign="Center" HeaderStyle-CssClass="text-center">
                                 <ItemTemplate>                                                                       
-                                    <asp:LinkButton ID="lnkExcluirAluno" runat="server" class="btn btn-md btn-danger" CommandName="EXCLUIR" ToolTip="Excluir Turma">
+                                    <asp:LinkButton ID="lnkExcluirProfessor" runat="server" class="btn btn-md btn-danger" CommandName="EXCLUIR" ToolTip="Excluir Professor">
                                             <i runat="server" class="fa fa-trash-alt"></i>
                                     </asp:LinkButton>
                                 </ItemTemplate>

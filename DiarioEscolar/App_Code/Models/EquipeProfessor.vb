@@ -3,7 +3,7 @@
 Public Class EquipeProfessor
     Private EE04_ID_EQUIPE_PROFESSOR As Integer
     Private EE02_ID_PROFESSOR As Integer
-    Private EE02_ID_EQUIPE_ESCOLA As Integer
+    Private EE06_ID_EQUIPE_ESCOLA As Integer
 
     Public Sub New()
     End Sub
@@ -28,10 +28,10 @@ Public Class EquipeProfessor
 
     Public Property CodigoEquipeEscola() As Integer
         Get
-            Return EE02_ID_EQUIPE_ESCOLA
+            Return EE06_ID_EQUIPE_ESCOLA
         End Get
         Set(value As Integer)
-            EE02_ID_EQUIPE_ESCOLA = value
+            EE06_ID_EQUIPE_ESCOLA = value
         End Set
     End Property
 
@@ -68,4 +68,45 @@ Public Class EquipeProfessor
 
         Return cnn.AbrirDataTable(strSQL.ToString)
     End Function
+
+    Friend Function Excluir(Codigo As Object)
+        Dim cnn As New Conexao
+        Dim strSQL As New StringBuilder
+        Dim LinhasAfetadas As Integer
+
+        strSQL.Append(" delete ")
+        strSQL.Append(" from EE04_EQUIPE_PROFESSOR")
+        strSQL.Append(" where EE04_ID_EQUIPE_PROFESSOR = " & Codigo)
+
+        LinhasAfetadas = cnn.ExecutarSQL(strSQL.ToString)
+
+        Return LinhasAfetadas
+    End Function
+
+    Public Sub Salvar()
+        Dim cnn As New Conexao
+        Dim dt As DataTable
+        Dim dr As DataRow
+        Dim strSQL As New StringBuilder
+
+        strSQL.Append(" select * ")
+        strSQL.Append(" from EE04_EQUIPE_PROFESSOR")
+        strSQL.Append(" where EE02_ID_PROFESSOR = " & CodigoProfessor)
+        strSQL.Append(" and EE06_ID_EQUIPE_ESCOLA = " & CodigoEquipeEscola)
+
+        dt = cnn.EditarDataTable(strSQL.ToString)
+
+        If dt.Rows.Count = 0 Then
+            dr = dt.NewRow
+            dr("EE02_ID_PROFESSOR") = ProBanco(EE02_ID_PROFESSOR, eTipoValor.CHAVE)
+            dr("EE06_ID_EQUIPE_ESCOLA") = ProBanco(EE06_ID_EQUIPE_ESCOLA, eTipoValor.CHAVE)
+            cnn.SalvarDataTable(dr)
+
+        End If
+
+        dt.Dispose()
+        dt = Nothing
+
+        cnn = Nothing
+    End Sub
 End Class

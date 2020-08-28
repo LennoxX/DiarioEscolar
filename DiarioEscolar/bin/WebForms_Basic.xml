@@ -514,9 +514,9 @@ Campo gerado automaticamente.
 Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
 </remarks>
 </member>
-<member name="F:DiarioEscolar.frmProfessorTurma._drpAluno">
+<member name="F:DiarioEscolar.frmProfessorTurma._drpProfessor">
 <summary>
-Controle drpAluno.
+Controle drpProfessor.
 </summary>
 <remarks>
 Campo gerado automaticamente.

@@ -161,4 +161,15 @@
 
         objEquipeAluno = Nothing
     End Sub
+
+    Protected Sub grdAlunos_Sorting(sender As Object, e As GridViewSortEventArgs) Handles grdAlunos.Sorting
+        ViewState("OrderByDirection") = IIf(ViewState("OrderByDirection") = "asc", "desc", "asc")
+        ViewState("OrderBy") = e.SortExpression & " " & ViewState("OrderByDirection")
+        CarregarGrid()
+    End Sub
+
+    Protected Sub grdAlunos_PageIndexChanging(sender As Object, e As GridViewPageEventArgs) Handles grdAlunos.PageIndexChanging
+        grdAlunos.PageIndex = e.NewPageIndex
+        CarregarGrid()
+    End Sub
 End Class

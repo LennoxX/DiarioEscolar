@@ -23,13 +23,13 @@ Partial Public Class frmProfessorTurma
     Protected WithEvents txtNomeEscola As Global.System.Web.UI.WebControls.Literal
 
     '''<summary>
-    '''Controle drpAluno.
+    '''Controle drpProfessor.
     '''</summary>
     '''<remarks>
     '''Campo gerado automaticamente.
     '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
     '''</remarks>
-    Protected WithEvents drpAluno As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents drpProfessor As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''Controle lblMatricula.
