@@ -55,11 +55,14 @@
                             <asp:TemplateField HeaderText="" SortExpression="" Visible="true" ItemStyle-HorizontalAlign="Center" HeaderStyle-CssClass="text-center">
                                 <ItemTemplate>
 
-                                    <asp:LinkButton ID="lnkProfessoresTurma" runat="server" class="btn btn-md btn-info" CommandName="PROFESSORES" ToolTip="Editar Turma">
+                                    <asp:LinkButton ID="lnkProfessoresTurma" runat="server" class="btn btn-md btn-warning" CommandName="PROFESSORES" ToolTip="Editar Turma">
                                            <i runat="server" class="fa fa-chalkboard-teacher"></i>
                                     </asp:LinkButton>
                                     <asp:LinkButton ID="lnkAlunosTurma" runat="server" class="btn btn-md btn-secondary" CommandName="ALUNOS" ToolTip="Alunos da Turma">
                                             <i runat="server" class="fa fa-user-graduate"></i>
+                                    </asp:LinkButton>
+                                    <asp:LinkButton ID="lnkDisciplinaTurma" runat="server" class="btn btn-md btn-success" CommandName="DISCIPLINAS" ToolTip="Editar DISCIPLINAS">
+                                           <i runat="server" class="fas fa-book"></i>
                                     </asp:LinkButton>
                                     <asp:LinkButton ID="lnkEditarTurma" runat="server" class="btn btn-md btn-info" CommandName="EDITAR" ToolTip="Editar Turma">
                                             <i runat="server" class="fa fa-pencil-alt"></i>

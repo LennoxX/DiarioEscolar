@@ -5,8 +5,13 @@ Public Class EquipeProfessor
     Private EE02_ID_PROFESSOR As Integer
     Private EE06_ID_EQUIPE_ESCOLA As Integer
 
-    Public Sub New()
+    Public Sub New(Optional ByVal Codigo As Integer = 0)
+        If Codigo > 0 Then
+            Obter(Codigo)
+        End If
     End Sub
+
+
 
     Public Property Codigo() As Integer
         Get
@@ -34,6 +39,42 @@ Public Class EquipeProfessor
             EE06_ID_EQUIPE_ESCOLA = value
         End Set
     End Property
+
+    Private Sub Obter(codigo As Integer)
+        Dim cnn As New Conexao
+        Dim dt As DataTable
+        Dim dr As DataRow
+        Dim strSQL As New StringBuilder
+
+        strSQL.Append(" select * ")
+        strSQL.Append(" from EE04_EQUIPE_PROFESSOR")
+        strSQL.Append(" where EE04_ID_EQUIPE_PROFESSOR = " & codigo)
+
+        dt = cnn.AbrirDataTable(strSQL.ToString)
+
+        If dt.Rows.Count > 0 Then
+            dr = dt.Rows(0)
+
+            EE04_ID_EQUIPE_PROFESSOR = DoBanco(dr("EE04_ID_EQUIPE_PROFESSOR"), eTipoValor.CHAVE)
+            EE02_ID_PROFESSOR = DoBanco(dr("EE02_ID_PROFESSOR"), eTipoValor.CHAVE)
+            EE06_ID_EQUIPE_ESCOLA = DoBanco(dr("EE06_ID_EQUIPE_ESCOLA"), eTipoValor.CHAVE)
+        End If
+    End Sub
+
+    Public Function ObterTabela(CodigoTurma As Integer) As DataTable
+        Dim cnn As New Conexao
+        Dim dt As DataTable
+        Dim strSQL As New StringBuilder
+
+        strSQL.Append(" select EE04_EQUIPE_PROFESSOR.EE04_ID_EQUIPE_PROFESSOR as CODIGO, EE02_PROFESSOR.EE02_NM_NOME as DESCRICAO ")
+        strSQL.Append(" from EE04_EQUIPE_PROFESSOR")
+        strSQL.Append(" Join EE02_PROFESSOR On EE04_EQUIPE_PROFESSOR.EE02_ID_PROFESSOR = EE02_PROFESSOR.EE02_ID_PROFESSOR")
+        strSQL.Append(" And EE04_EQUIPE_PROFESSOR.EE06_ID_EQUIPE_ESCOLA =" & CodigoTurma)
+
+        dt = cnn.AbrirDataTable(strSQL.ToString)
+
+        Return dt
+    End Function
 
     Public Function Pesquisar(CodigoTurma As Integer,
                              Optional ByVal Sort As String = "",
@@ -69,7 +110,7 @@ Public Class EquipeProfessor
         Return cnn.AbrirDataTable(strSQL.ToString)
     End Function
 
-    Friend Function Excluir(Codigo As Object)
+    Friend Function Excluir(Codigo As Object) As Integer
         Dim cnn As New Conexao
         Dim strSQL As New StringBuilder
         Dim LinhasAfetadas As Integer

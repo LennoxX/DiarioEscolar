@@ -221,6 +221,7 @@ Public Class Professor
         Return dt
     End Function
 
+
     Friend Function Excluir(Codigo As Integer) As Integer
         Dim cnn As New Conexao
         Dim strSQL As New StringBuilder

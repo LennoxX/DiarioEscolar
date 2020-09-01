@@ -109,6 +109,10 @@
 
             Case DataControlRowType.DataRow
 
+                Dim lnkDisciplinaTurma As New LinkButton
+                lnkDisciplinaTurma = DirectCast(e.Row.Cells(2).FindControl("lnkDisciplinaTurma"), LinkButton)
+                lnkDisciplinaTurma.CommandArgument = e.Row.RowIndex
+
                 Dim lnkExcluirTurma As New LinkButton
                 lnkExcluirTurma = DirectCast(e.Row.Cells(2).FindControl("lnkExcluirTurma"), LinkButton)
                 lnkExcluirTurma.CommandArgument = e.Row.RowIndex
@@ -133,6 +137,8 @@
     Protected Sub grdTurmas_RowCommand(sender As Object, e As GridViewCommandEventArgs) Handles grdTurmas.RowCommand
         If e.CommandName = "" Then
             Response.Redirect(Request.Url.ToString)
+        ElseIf e.CommandName = "DISCIPLINAS" Then
+            Response.Redirect("frmDisciplinaTurma.aspx?idTurma=" + (grdTurmas.DataKeys(e.CommandArgument).Item(0)).ToString())
         ElseIf e.CommandName = "PROFESSORES" Then
             Response.Redirect("frmProfessorTurma.aspx?idTurma=" + (grdTurmas.DataKeys(e.CommandArgument).Item(0)).ToString())
         ElseIf e.CommandName = "ALUNOS" Then
