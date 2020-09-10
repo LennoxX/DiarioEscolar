@@ -2,6 +2,7 @@
     Private EE17_ID_FALTA As Integer
     Private EE08_ID_AULA As Integer
     Private EE17_NR_FALTA As Integer
+    Private EE05_ID_EQUIPE_ALUNO As Integer
 
     Public Sub New()
     End Sub
@@ -30,6 +31,15 @@
         End Get
         Set(value As Integer)
             EE17_NR_FALTA = value
+        End Set
+    End Property
+
+    Public Property CodigoEquipeAluno() As Integer
+        Get
+            Return EE05_ID_EQUIPE_ALUNO
+        End Get
+        Set(value As Integer)
+            EE05_ID_EQUIPE_ALUNO = value
         End Set
     End Property
 End Class

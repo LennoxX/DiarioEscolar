@@ -75,6 +75,9 @@
                             <asp:BoundField DataField="EE02_NM_NOME" SortExpression="EE02_NM_NOME" HeaderText="Professor" />
                             <asp:TemplateField HeaderText="" SortExpression="" Visible="true" ItemStyle-HorizontalAlign="Center" HeaderStyle-CssClass="text-center">
                                 <ItemTemplate>
+                                     <asp:LinkButton ID="LinkButton1" runat="server" class="btn btn-md btn-info" CommandName="EXCLUIR" ToolTip="Aulas">
+                                            <i runat="server" class="fa fa-book-open"></i>
+                                    </asp:LinkButton>
                                     <asp:LinkButton ID="lnkExcluirDisciplinaTurma" runat="server" class="btn btn-md btn-danger" CommandName="EXCLUIR" ToolTip="Excluir Aluno">
                                             <i runat="server" class="fa fa-trash-alt"></i>
                                     </asp:LinkButton>
