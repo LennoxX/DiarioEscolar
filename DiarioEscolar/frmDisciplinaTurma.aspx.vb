@@ -142,6 +142,8 @@
     Protected Sub grdDisciplinas_RowCommand(sender As Object, e As GridViewCommandEventArgs) Handles grdDisciplinas.RowCommand
         If e.CommandName = "" Then
             Response.Redirect(Request.Url.ToString)
+        ElseIf e.CommandName = "AULAS" Then
+            Response.Redirect("frmAula.aspx?idEquipeDisciplina=" + grdDisciplinas.DataKeys(e.CommandArgument).Item(0).ToString())
         ElseIf e.CommandName = "EXCLUIR" Then
             Excluir(grdDisciplinas.DataKeys(e.CommandArgument).Item(0))
         End If
@@ -167,6 +169,10 @@
                 Dim lnkExcluirDisciplinaTurma As New LinkButton
                 lnkExcluirDisciplinaTurma = DirectCast(e.Row.Cells(2).FindControl("lnkExcluirDisciplinaTurma"), LinkButton)
                 lnkExcluirDisciplinaTurma.CommandArgument = e.Row.RowIndex
+
+                Dim lnkAulaTurma As New LinkButton
+                lnkAulaTurma = DirectCast(e.Row.Cells(2).FindControl("lnkAulaTurma"), LinkButton)
+                lnkAulaTurma.CommandArgument = e.Row.RowIndex
 
 
         End Select

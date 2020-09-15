@@ -217,6 +217,69 @@ Campo gerado automaticamente.
 Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
 </remarks>
 </member>
+<member name="F:DiarioEscolar.frmAula._txtNomeDisciplina">
+<summary>
+Controle txtNomeDisciplina.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAula._txtNomeEscola">
+<summary>
+Controle txtNomeEscola.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAula._txtConteudo">
+<summary>
+Controle txtConteudo.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAula._dtAula">
+<summary>
+Controle dtAula.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAula._btnSalvar">
+<summary>
+Controle btnSalvar.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAula._lblRegistros">
+<summary>
+Controle lblRegistros.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAula._grdAulas">
+<summary>
+Controle grdAulas.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
 <member name="F:DiarioEscolar.frmDisciplina._txtDisciplina">
 <summary>
 Controle txtDisciplina.
