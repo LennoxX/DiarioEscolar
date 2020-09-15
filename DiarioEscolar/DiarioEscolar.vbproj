@@ -150,6 +150,7 @@
     </Compile>
     <Content Include="ctrMensagens.ascx" />
     <Content Include="frmAlunoTurma.aspx" />
+    <Content Include="frmAula.aspx" />
     <Content Include="frmDisciplina.aspx" />
     <Content Include="frmDisciplinaTurma.aspx" />
     <Content Include="frmEscola.aspx" />
@@ -285,6 +286,13 @@
     </Compile>
     <Compile Include="frmAlunoTurma.aspx.vb">
       <DependentUpon>frmAlunoTurma.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="frmAula.aspx.designer.vb">
+      <DependentUpon>frmAula.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmAula.aspx.vb">
+      <DependentUpon>frmAula.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="frmDisciplina.aspx.designer.vb">

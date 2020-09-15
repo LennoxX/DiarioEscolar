@@ -5,7 +5,10 @@ Public Class EquipeDisciplina
     Private EE11_ID_DISCIPLINA As Integer
     Private EE04_ID_EQUIPE_PROFESSOR As Integer
 
-    Public Sub New()
+    Public Sub New(Optional ByVal Codigo As Integer = 0)
+        If Codigo > 0 Then
+            Obter(Codigo)
+        End If
     End Sub
 
     Public Property Codigo() As Integer
@@ -35,6 +38,28 @@ Public Class EquipeDisciplina
             EE04_ID_EQUIPE_PROFESSOR = value
         End Set
     End Property
+
+    Private Sub Obter(codigo As Integer)
+        Dim cnn As New Conexao
+        Dim dt As DataTable
+        Dim dr As DataRow
+        Dim strSQL As New StringBuilder
+
+        strSQL.Append(" select * ")
+        strSQL.Append(" from EE13_EQUIPE_DISCIPLINA")
+        strSQL.Append(" where EE13_ID_EQUIPE_DISCIPLINA = " & codigo)
+
+        dt = cnn.AbrirDataTable(strSQL.ToString)
+
+        If dt.Rows.Count > 0 Then
+            dr = dt.Rows(0)
+
+            EE13_ID_EQUIPE_DISCIPLINA = DoBanco(dr("EE13_ID_EQUIPE_DISCIPLINA"), eTipoValor.CHAVE)
+            EE11_ID_DISCIPLINA = DoBanco(dr("EE11_ID_DISCIPLINA"), eTipoValor.CHAVE)
+            EE04_ID_EQUIPE_PROFESSOR = DoBanco(dr("EE04_ID_EQUIPE_PROFESSOR"), eTipoValor.CHAVE)
+        End If
+
+    End Sub
 
     Public Function Pesquisar(CodigoTurma As Integer,
                              Optional ByVal Sort As String = "",
