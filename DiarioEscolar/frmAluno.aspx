@@ -68,7 +68,7 @@
                     <asp:GridView ID="grdAluno" runat="server" CssClass="table table-bordered" PagerStyle-HorizontalAlign="Right" AllowPaging="True" PageSize="2" AutoGenerateColumns="False" DataKeyNames="EE03_ID_ALUNO" AllowSorting="True">
                         <HeaderStyle CssClass="bg-white" ForeColor="Black" />
                         <Columns>
-                            <asp:BoundField DataField="EE03_ID_ALUNO" SortExpression="EE03_ID_ALUNO" HeaderText="Código" />
+                            <asp:BoundField DataField="EE05_EQUIPE_ALUNO.EE05_ID_EQUIPE_ALUNO" SortExpression="EE05_EQUIPE_ALUNO.EE05_ID_EQUIPE_ALUNO" HeaderText="Código" />
                             <asp:BoundField DataField="EE03_NM_NOME" SortExpression="EE03_NM_NOME" HeaderText="Nome" />
                             <asp:BoundField DataField="EE03_DS_MATRICULA" SortExpression="EE03_DS_MATRICULA" HeaderText="Matrícula" />
                             <asp:TemplateField HeaderText="" SortExpression="" Visible="true" ItemStyle-HorizontalAlign="Center" HeaderStyle-CssClass="text-center">
