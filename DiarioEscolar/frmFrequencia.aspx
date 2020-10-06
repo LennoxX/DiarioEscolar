@@ -45,8 +45,8 @@
                                 <ItemTemplate>
 
                                     <asp:DropDownList AutoPostBack="true" ID="drpStatus" class="form-control" runat="server">
-                                        <asp:ListItem Text="Presente" Value="0"></asp:ListItem>
-                                        <asp:ListItem Text="Ausente" Value="1"></asp:ListItem>
+                                        <asp:ListItem Text="Presente" Value="1"></asp:ListItem>
+                                        <asp:ListItem Text="Ausente" Value="0"></asp:ListItem>
 
                                     </asp:DropDownList>
 
