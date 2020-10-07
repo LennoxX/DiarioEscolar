@@ -76,10 +76,13 @@
                             <asp:TemplateField HeaderText="" SortExpression="" Visible="true" ItemStyle-HorizontalAlign="Center" HeaderStyle-CssClass="text-center">
                                 <ItemTemplate>
                                      <asp:LinkButton ID="lnkAulaTurma" runat="server" class="btn btn-md btn-info" CommandName="AULAS" ToolTip="Aulas">
-                                            <i runat="server" class="fa fa-book-open"></i>
+                                            <i runat="server" class="fas fa-newspaper"></i>
                                     </asp:LinkButton>
                                     <asp:LinkButton ID="lnkExcluirDisciplinaTurma" runat="server" class="btn btn-md btn-danger" CommandName="EXCLUIR" ToolTip="Excluir Aluno">
                                             <i runat="server" class="fa fa-trash-alt"></i>
+                                    </asp:LinkButton>
+                                      <asp:LinkButton ID="lnkAtividades" runat="server" class="btn btn-md btn-success" CommandName="ATIVIDADES" ToolTip="Atividades da Turma">
+                                            <i runat="server" class="fa fa-book-open"></i>
                                     </asp:LinkButton>
                                 </ItemTemplate>
                             </asp:TemplateField>

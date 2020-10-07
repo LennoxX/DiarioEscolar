@@ -108,7 +108,7 @@
         If e.CommandName = "" Then
             Response.Redirect(Request.Url.ToString)
         ElseIf e.CommandName = "FREQUENCIA" Then
-            Response.Redirect("frmAula.aspx?idEquipeDisciplina=" + grdAulas.DataKeys(e.CommandArgument).Item(0).ToString())
+            Response.Redirect("frmFrequencia.aspx?idAula=" + grdAulas.DataKeys(e.CommandArgument).Item(0).ToString())
         ElseIf e.CommandName = "EDITAR" Then
             Editar(grdAulas.DataKeys(e.CommandArgument).Item(0))
         End If

@@ -150,6 +150,7 @@
     </Compile>
     <Content Include="ctrMensagens.ascx" />
     <Content Include="frmAlunoTurma.aspx" />
+    <Content Include="frmAtividadeDisciplina.aspx" />
     <Content Include="frmAula.aspx" />
     <Content Include="frmDisciplina.aspx" />
     <Content Include="frmDisciplinaTurma.aspx" />
@@ -182,6 +183,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="frmAluno.aspx" />
+    <Content Include="frmFrequencia.aspx" />
     <Content Include="frmMatriz.aspx" />
     <Content Include="frmPeriodoLetivo.aspx" />
     <Content Include="frmProfessor.aspx" />
@@ -288,6 +290,13 @@
       <DependentUpon>frmAlunoTurma.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="frmAtividadeDisciplina.aspx.designer.vb">
+      <DependentUpon>frmAtividadeDisciplina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmAtividadeDisciplina.aspx.vb">
+      <DependentUpon>frmAtividadeDisciplina.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="frmAula.aspx.designer.vb">
       <DependentUpon>frmAula.aspx</DependentUpon>
     </Compile>
@@ -344,6 +353,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.vb">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmFrequencia.aspx.designer.vb">
+      <DependentUpon>frmFrequencia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmFrequencia.aspx.vb">
+      <DependentUpon>frmFrequencia.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="frmMatriz.aspx.designer.vb">
       <DependentUpon>frmMatriz.aspx</DependentUpon>

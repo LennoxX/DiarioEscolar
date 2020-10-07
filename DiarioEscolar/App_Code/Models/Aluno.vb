@@ -235,4 +235,19 @@ Public Class Aluno
 
         Return cnn.AbrirDataTable(strSQL.ToString)
     End Function
+
+    Public Function ObterPorTurma(ByVal IdTurma As Integer) As DataTable
+        Dim cnn As New Conexao
+        Dim strSQL As New StringBuilder
+
+        strSQL.Append(" Select EE05_EQUIPE_ALUNO.EE05_ID_EQUIPE_ALUNO, EE03_ALUNO.EE03_NM_NOME FROM EE05_EQUIPE_ALUNO ")
+        strSQL.Append(" Join EE06_EQUIPE_ESCOLA on EE06_EQUIPE_ESCOLA.EE06_ID_EQUIPE_ESCOLA = EE05_EQUIPE_ALUNO.EE06_ID_EQUIPE_ESCOLA")
+        strSQL.Append(" Join EE04_EQUIPE_PROFESSOR on EE04_EQUIPE_PROFESSOR.EE06_ID_EQUIPE_ESCOLA = EE06_EQUIPE_ESCOLA.EE06_ID_EQUIPE_ESCOLA")
+        strSQL.Append(" Join EE13_EQUIPE_DISCIPLINA on EE13_EQUIPE_DISCIPLINA.EE04_ID_EQUIPE_PROFESSOR = EE04_EQUIPE_PROFESSOR.EE04_ID_EQUIPE_PROFESSOR")
+        strSQL.Append(" Join EE08_AULA on EE08_AULA.EE13_ID_EQUIPE_DISCIPLINA = EE13_EQUIPE_DISCIPLINA.EE13_ID_EQUIPE_DISCIPLINA")
+        strSQL.Append(" Join EE03_ALUNO on EE03_ALUNO.EE03_ID_ALUNO = EE05_EQUIPE_ALUNO.EE03_ID_ALUNO")
+        strSQL.Append(" Where EE08_AULA.EE08_ID_AULA = " & IdTurma)
+        strSQL.Append(" Order by EE03_NM_NOME")
+        Return cnn.AbrirDataTable(strSQL.ToString)
+    End Function
 End Class

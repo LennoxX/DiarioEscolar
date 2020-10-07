@@ -217,6 +217,60 @@ Campo gerado automaticamente.
 Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
 </remarks>
 </member>
+<member name="F:DiarioEscolar.frmAtividadeDisciplina._txtNomeEscola">
+<summary>
+Controle txtNomeEscola.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAtividadeDisciplina._drpTipoAtividade">
+<summary>
+Controle drpTipoAtividade.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAtividadeDisciplina._dtRealizacao">
+<summary>
+Controle dtRealizacao.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAtividadeDisciplina._btnSalvar">
+<summary>
+Controle btnSalvar.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAtividadeDisciplina._lblRegistros">
+<summary>
+Controle lblRegistros.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmAtividadeDisciplina._grdAtividades">
+<summary>
+Controle grdAtividades.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
 <member name="F:DiarioEscolar.frmAula._txtNomeDisciplina">
 <summary>
 Controle txtNomeDisciplina.
@@ -481,6 +535,51 @@ Modificar a declaração do campo de movimento do arquivo de designer para o arq
 <member name="F:DiarioEscolar.frmEscola._grdEscolas">
 <summary>
 Controle grdEscolas.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmFrequencia._txtNomeDisciplina">
+<summary>
+Controle txtNomeDisciplina.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmFrequencia._txtNomeEscola">
+<summary>
+Controle txtNomeEscola.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmFrequencia._grdAluno">
+<summary>
+Controle grdAluno.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmFrequencia._RepterDetails">
+<summary>
+Controle RepterDetails.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmFrequencia._btnSalvar">
+<summary>
+Controle btnSalvar.
 </summary>
 <remarks>
 Campo gerado automaticamente.
