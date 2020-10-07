@@ -6,21 +6,17 @@
         If Not Page.IsPostBack Then
             CarregarGrid()
         End If
-
     End Sub
 
     Private Sub CarregarGrid()
         Dim objAluno As New Aluno
         grdAluno.DataSource = objAluno.ObterPorTurma(ViewState("idAula"))
         grdAluno.DataBind()
-
         For Each item As GridViewRow In grdAluno.Rows
             Dim tmpDropDown As DropDownList
             Dim objFrequencia As New Falta()
             Dim falta As Integer
-
-            objFrequencia.CodigoEquipeAluno = grdAluno.DataKeys(item.RowIndex).Item(0) ' SETAR VALOR DA FALTA
-
+            objFrequencia.CodigoEquipeAluno = grdAluno.DataKeys(item.RowIndex).Item(0)
             tmpDropDown = item.FindControl("drpStatus")
             With objFrequencia.Pesquisar(,, ViewState("idAula"),, objFrequencia.CodigoEquipeAluno)
                 If .Rows.Count > 0 Then
@@ -60,7 +56,6 @@
     Protected Sub btnSalvar_Click(sender As Object, e As EventArgs)
         Salvar()
         CarregarGrid()
-
     End Sub
 
     Private Sub Salvar()
