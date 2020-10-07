@@ -45,6 +45,37 @@ Public Class Falta
         End Set
     End Property
 
+    Public Function Pesquisar(Optional ByVal Sort As String = "",
+                            Optional ByVal Codigo As Integer = 0,
+                            Optional ByVal CodigoAula As Integer = 0,
+                            Optional ByVal Falta As Integer = 0,
+                            Optional ByVal CodigoEquipeAluno As Integer = 0
+                           ) As DataTable
+        Dim cnn As New Conexao
+        Dim strSQL As New StringBuilder
+
+        strSQL.Append(" Select * ")
+        strSQL.Append(" from  EE17_FALTA")
+        strSQL.Append(" where  EE17_ID_FALTA Is Not null")
+
+        If Codigo > 0 Then
+            strSQL.Append(" And EE17_ID_FALTA = " & Codigo)
+        End If
+
+        If CodigoAula > 0 Then
+            strSQL.Append("  And EE08_ID_AULA = " & CodigoAula)
+        End If
+
+        If Falta > 0 Then
+            strSQL.Append("  And EE17_NR_FALTA = " & Falta)
+        End If
+
+        If CodigoEquipeAluno > 0 Then
+            strSQL.Append("  And EE05_ID_EQUIPE_ALUNO = " & CodigoEquipeAluno)
+        End If
+
+        Return cnn.AbrirDataTable(strSQL.ToString)
+    End Function
 
     Public Sub Salvar()
         Dim cnn As New Conexao

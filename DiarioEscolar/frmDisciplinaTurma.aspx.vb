@@ -146,6 +146,8 @@
             Response.Redirect("frmAula.aspx?idEquipeDisciplina=" + grdDisciplinas.DataKeys(e.CommandArgument).Item(0).ToString())
         ElseIf e.CommandName = "EXCLUIR" Then
             Excluir(grdDisciplinas.DataKeys(e.CommandArgument).Item(0))
+        ElseIf e.CommandName = "ATIVIDADES" Then
+            Response.Redirect("frmAtividadeDisciplina.aspx?idEquipeDisciplina=" + grdDisciplinas.DataKeys(e.CommandArgument).Item(0).ToString())
         End If
     End Sub
 
@@ -174,6 +176,9 @@
                 lnkAulaTurma = DirectCast(e.Row.Cells(2).FindControl("lnkAulaTurma"), LinkButton)
                 lnkAulaTurma.CommandArgument = e.Row.RowIndex
 
+                Dim lnkAtividades As New LinkButton
+                lnkAtividades = DirectCast(e.Row.Cells(2).FindControl("lnkAtividades"), LinkButton)
+                lnkAtividades.CommandArgument = e.Row.RowIndex
 
         End Select
     End Sub
