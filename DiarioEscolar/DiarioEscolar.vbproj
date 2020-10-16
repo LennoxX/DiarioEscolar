@@ -148,6 +148,10 @@
       <DependentUpon>frmAluno.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Content Include="App_Data\Database.mdf" />
+    <Content Include="App_Data\Database_log.ldf">
+      <DependentUpon>Database.mdf</DependentUpon>
+    </Content>
     <Content Include="ctrMensagens.ascx" />
     <Content Include="frmAlunoTurma.aspx" />
     <Content Include="frmAtividadeDisciplina.aspx" />
@@ -185,6 +189,7 @@
     <Content Include="frmAluno.aspx" />
     <Content Include="frmFrequencia.aspx" />
     <Content Include="frmMatriz.aspx" />
+    <Content Include="frmNotasAtividade.aspx" />
     <Content Include="frmPeriodoLetivo.aspx" />
     <Content Include="frmProfessor.aspx" />
     <Content Include="frmProfessorTurma.aspx" />
@@ -368,6 +373,13 @@
       <DependentUpon>frmMatriz.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="frmNotasAtividade.aspx.designer.vb">
+      <DependentUpon>frmNotasAtividade.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmNotasAtividade.aspx.vb">
+      <DependentUpon>frmNotasAtividade.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="frmPeriodoLetivo.aspx.designer.vb">
       <DependentUpon>frmPeriodoLetivo.aspx</DependentUpon>
     </Compile>
@@ -492,9 +504,7 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -6,11 +6,12 @@
         If Not Page.IsPostBack Then
             CarregarGrid()
         End If
+        JavaScript.ExibirConfirmacao(btnSalvar, eTipoConfirmacao.SALVAR)
     End Sub
 
     Private Sub CarregarGrid()
         Dim objAluno As New Aluno
-        grdAluno.DataSource = objAluno.ObterPorTurma(ViewState("idAula"))
+        grdAluno.DataSource = objAluno.ObterPorTurma(ViewState("idTurma"))
         grdAluno.DataBind()
         For Each item As GridViewRow In grdAluno.Rows
             Dim tmpDropDown As DropDownList

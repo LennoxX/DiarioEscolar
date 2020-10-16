@@ -8,6 +8,7 @@
             CarregarGrid()
 
         End If
+        JavaScript.ExibirConfirmacao(btnSalvar, eTipoConfirmacao.SALVAR)
     End Sub
 
     Private Sub CarregarGrid()

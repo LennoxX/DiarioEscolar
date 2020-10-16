@@ -7,6 +7,7 @@
             Formulario.CarregarComboTabela(drpCidade, New Cidade, "Selecione...",)
             Formulario.CarregarComboTabela(drpSituacao, New TipoSituacao, "Selecione...",)
         End If
+        JavaScript.ExibirConfirmacao(btnSalvar, eTipoConfirmacao.SALVAR)
     End Sub
 
     Private Sub CarregarGrid()

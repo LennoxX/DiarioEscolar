@@ -115,8 +115,8 @@ Public Class Aluno
             dr = dt.Rows(0)
 
             EE03_ID_ALUNO = DoBanco(dr("EE03_ID_ALUNO"), eTipoValor.CHAVE)
-            EE03_NM_NOME = DoBanco(dr("EE03_NM_NOME"), eTipoValor.TEXTO)
-            EE03_NM_NOME_EXIBICAO = DoBanco(dr("EE03_NM_NOME_EXIBICAO"), eTipoValor.TEXTO)
+            EE03_NM_NOME = DoBanco(dr("EE03_NM_NOME"), eTipoValor.TEXTO_LIVRE)
+            EE03_NM_NOME_EXIBICAO = DoBanco(dr("EE03_NM_NOME_EXIBICAO"), eTipoValor.TEXTO_LIVRE)
             EE03_DS_MATRICULA = DoBanco(dr("EE03_DS_MATRICULA"), eTipoValor.TEXTO)
             EE03_DS_EMAIL = DoBanco(dr("EE03_DS_EMAIL"), eTipoValor.TEXTO)
             EE03_DT_NASCIMENTO = DoBanco(dr("EE03_DT_NASCIMENTO"), eTipoValor.DATA)
@@ -157,8 +157,8 @@ Public Class Aluno
         End If
 
         dr("EE03_ID_ALUNO") = ProBanco(EE03_ID_ALUNO, eTipoValor.CHAVE)
-        dr("EE03_NM_NOME") = ProBanco(EE03_NM_NOME, eTipoValor.TEXTO)
-        dr("EE03_NM_NOME_EXIBICAO") = ProBanco(EE03_NM_NOME_EXIBICAO, eTipoValor.TEXTO)
+        dr("EE03_NM_NOME") = ProBanco(EE03_NM_NOME, eTipoValor.TEXTO_LIVRE)
+        dr("EE03_NM_NOME_EXIBICAO") = ProBanco(EE03_NM_NOME_EXIBICAO, eTipoValor.TEXTO_LIVRE)
         dr("EE03_DS_MATRICULA") = ProBanco(EE03_DS_MATRICULA, eTipoValor.TEXTO)
         dr("EE03_DS_EMAIL") = ProBanco(EE03_DS_EMAIL, eTipoValor.TEXTO)
         dr("EE03_DT_NASCIMENTO") = ProBanco(EE03_DT_NASCIMENTO, eTipoValor.DATA)
@@ -246,7 +246,7 @@ Public Class Aluno
         strSQL.Append(" Join EE13_EQUIPE_DISCIPLINA on EE13_EQUIPE_DISCIPLINA.EE04_ID_EQUIPE_PROFESSOR = EE04_EQUIPE_PROFESSOR.EE04_ID_EQUIPE_PROFESSOR")
         strSQL.Append(" Join EE08_AULA on EE08_AULA.EE13_ID_EQUIPE_DISCIPLINA = EE13_EQUIPE_DISCIPLINA.EE13_ID_EQUIPE_DISCIPLINA")
         strSQL.Append(" Join EE03_ALUNO on EE03_ALUNO.EE03_ID_ALUNO = EE05_EQUIPE_ALUNO.EE03_ID_ALUNO")
-        strSQL.Append(" Where EE08_AULA.EE08_ID_AULA = " & IdTurma)
+        strSQL.Append(" Where EE06_EQUIPE_ESCOLA.EE06_ID_EQUIPE_ESCOLA =" & IdTurma)
         strSQL.Append(" Order by EE03_NM_NOME")
         Return cnn.AbrirDataTable(strSQL.ToString)
     End Function

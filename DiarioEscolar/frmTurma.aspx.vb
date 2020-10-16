@@ -4,15 +4,10 @@
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         CarregarInfo()
         If Not Page.IsPostBack Then
-
-            If (Request.QueryString("idEscola") Is Nothing) Then
-                Response.Redirect("frmEscola.aspx")
-            End If
-
-
             CarregarCombo(drpMatriz, New Matriz, "Selecione...")
             CarregarGrid()
         End If
+        JavaScript.ExibirConfirmacao(btnSalvar, eTipoConfirmacao.SALVAR)
     End Sub
 
     Public Sub CarregarCombo(ByRef Controle As Object, ByRef objClasse As Object,
@@ -39,15 +34,23 @@
     End Sub
 
     Private Sub CarregarInfo()
-        Dim idEscola As Integer = Request.QueryString("idEscola")
-        ViewState("idEscola") = idEscola
-        Dim objEscola = New Escola(idEscola)
-        txtNomeEscola.Text = objEscola.Nome
-        Dim objSituacao As New TipoSituacao(objEscola.CodigoSituacao)
-        Dim objCidade As New Cidade(objEscola.CodigoCidade)
+
+        Dim idEscola As Integer
+        Try
+            idEscola = Request.QueryString("idEscola")
+            ViewState("idEscola") = idEscola
+        Catch ex As Exception
+            Response.Redirect("frmEscola.aspx")
+        End Try
+
+        Dim objEscola As New Escola(idEscola)
+
+        If (objEscola.Codigo > 0) Then
+            txtNomeEscola.Text = objEscola.Nome
+        Else
+            Response.Redirect("frmEscola.aspx")
+        End If
     End Sub
-
-
 
     Private Sub Salvar()
         Dim objEquipeEscola As New EquipeEscola

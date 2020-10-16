@@ -568,15 +568,6 @@ Campo gerado automaticamente.
 Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
 </remarks>
 </member>
-<member name="F:DiarioEscolar.frmFrequencia._RepterDetails">
-<summary>
-Controle RepterDetails.
-</summary>
-<remarks>
-Campo gerado automaticamente.
-Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-</remarks>
-</member>
 <member name="F:DiarioEscolar.frmFrequencia._btnSalvar">
 <summary>
 Controle btnSalvar.
@@ -634,6 +625,33 @@ Modificar a declaração do campo de movimento do arquivo de designer para o arq
 <member name="F:DiarioEscolar.frmMatriz._grdMatriz">
 <summary>
 Controle grdMatriz.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmNotasAtividade._txtNomeEscola">
+<summary>
+Controle txtNomeEscola.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmNotasAtividade._grdAluno">
+<summary>
+Controle grdAluno.
+</summary>
+<remarks>
+Campo gerado automaticamente.
+Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+</remarks>
+</member>
+<member name="F:DiarioEscolar.frmNotasAtividade._btnSalvar">
+<summary>
+Controle btnSalvar.
 </summary>
 <remarks>
 Campo gerado automaticamente.

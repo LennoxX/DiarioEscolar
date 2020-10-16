@@ -3,6 +3,7 @@
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         CarregarInfo()
+        JavaScript.ExibirConfirmacao(btnSalvar, eTipoConfirmacao.SALVAR)
         If Not Page.IsPostBack Then
             CarregarGrid()
         End If
@@ -62,16 +63,17 @@
         Else
             objAula = New Aula
         End If
-
-        With objAula
-            .Conteudo = txtConteudo.Text
-            .DataCadastro = dtAula.Text
-            .IdEquipeDisciplina = ViewState("idEquipeDisciplina")
-            .Salvar()
-        End With
-        MsgBox(eTipoMensagem.SALVAR_SUCESSO)
-
-
+        Try
+            With objAula
+                .Conteudo = txtConteudo.Text
+                .DataCadastro = dtAula.Text
+                .IdEquipeDisciplina = ViewState("idEquipeDisciplina")
+                .Salvar()
+            End With
+            MsgBox(eTipoMensagem.SALVAR_SUCESSO)
+        Catch ex As Exception
+            MsgBox(eTipoMensagem.SALVAR_ERRO)
+        End Try
         ViewState("CodigoAula") = Nothing
         objAula = Nothing
     End Sub

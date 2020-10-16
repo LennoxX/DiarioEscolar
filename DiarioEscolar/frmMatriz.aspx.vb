@@ -3,8 +3,6 @@
 
     Dim objEscola As Escola
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
-
         Dim idEscola As Integer = Request.QueryString("idEscola")
         CarregarInfo(idEscola)
         If Not Page.IsPostBack Then
@@ -12,6 +10,7 @@
             Formulario.CarregarComboTabela(drpPeriodoLetivo, New PeriodoLetivo, "Selecione...")
             CarregarGrid()
         End If
+        JavaScript.ExibirConfirmacao(btnSalvar, eTipoConfirmacao.SALVAR)
     End Sub
 
     Private Sub CarregarInfo(idEscola As Integer)

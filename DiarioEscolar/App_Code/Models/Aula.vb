@@ -66,7 +66,7 @@ Public Class Aula
             EE08_ID_AULA = DoBanco(dr("EE08_ID_AULA"), eTipoValor.CHAVE)
             EE13_ID_EQUIPE_DISCIPLINA = DoBanco(dr("EE13_ID_EQUIPE_DISCIPLINA"), eTipoValor.CHAVE)
             EE08_DT_CADASTRO = DoBanco(dr("EE08_DT_CADASTRO"), eTipoValor.DATA)
-            EE08_DS_CONTEUDO = DoBanco(dr("EE08_DS_CONTEUDO"), eTipoValor.TEXTO)
+            EE08_DS_CONTEUDO = DoBanco(dr("EE08_DS_CONTEUDO"), eTipoValor.TEXTO_LIVRE)
 
         End If
 
@@ -93,7 +93,7 @@ Public Class Aula
         dr("EE08_ID_AULA") = ProBanco(EE08_ID_AULA, eTipoValor.CHAVE)
         dr("EE13_ID_EQUIPE_DISCIPLINA") = ProBanco(EE13_ID_EQUIPE_DISCIPLINA, eTipoValor.CHAVE)
         dr("EE08_DT_CADASTRO") = ProBanco(EE08_DT_CADASTRO, eTipoValor.DATA)
-        dr("EE08_DS_CONTEUDO") = ProBanco(EE08_DS_CONTEUDO, eTipoValor.TEXTO)
+        dr("EE08_DS_CONTEUDO") = ProBanco(EE08_DS_CONTEUDO, eTipoValor.TEXTO_LIVRE)
 
 
         cnn.SalvarDataTable(dr)

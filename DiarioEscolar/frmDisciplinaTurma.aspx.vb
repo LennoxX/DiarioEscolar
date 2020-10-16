@@ -7,8 +7,8 @@
             CarregarComboDisciplina()
             CarregarComboProfessores()
             CarregarGrid()
-
         End If
+        JavaScript.ExibirConfirmacao(btnSalvar, eTipoConfirmacao.SALVAR)
     End Sub
 
     Private Sub CarregarGrid()
@@ -123,20 +123,18 @@
     Private Sub Salvar()
         Dim objEquipeDisciplina As New EquipeDisciplina
 
-        Try
-            With objEquipeDisciplina
+
+        With objEquipeDisciplina
                 .CodigoEquipeProfessor = drpProfessor.SelectedValue
                 .CodigoDisciplina = drpDisciplina.SelectedValue
                 .Salvar()
             End With
             MsgBox(eTipoMensagem.SALVAR_SUCESSO)
-        Catch ex As Exception
-            MsgBox(eTipoMensagem.SALVAR_ERRO)
-        End Try
 
 
 
-        objEquipeDisciplina = Nothing
+
+            objEquipeDisciplina = Nothing
     End Sub
 
     Protected Sub grdDisciplinas_RowCommand(sender As Object, e As GridViewCommandEventArgs) Handles grdDisciplinas.RowCommand

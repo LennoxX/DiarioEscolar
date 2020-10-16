@@ -6,8 +6,8 @@
         If Not Page.IsPostBack Then
             CarregarComboProfessores()
             CarregarGrid()
-
         End If
+        JavaScript.ExibirConfirmacao(btnSalvar, eTipoConfirmacao.SALVAR)
     End Sub
 
     Private Sub CarregarInfo()

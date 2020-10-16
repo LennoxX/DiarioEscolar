@@ -114,8 +114,8 @@ Public Class Professor
             dr = dt.Rows(0)
 
             EE02_ID_PROFESSOR = DoBanco(dr("EE02_ID_PROFESSOR"), eTipoValor.CHAVE)
-            EE02_NM_NOME = DoBanco(dr("EE02_NM_NOME"), eTipoValor.TEXTO)
-            EE02_NM_NOME_EXIBICAO = DoBanco(dr("EE02_NM_NOME_EXIBICAO"), eTipoValor.TEXTO)
+            EE02_NM_NOME = DoBanco(dr("EE02_NM_NOME"), eTipoValor.TEXTO_LIVRE)
+            EE02_NM_NOME_EXIBICAO = DoBanco(dr("EE02_NM_NOME_EXIBICAO"), eTipoValor.TEXTO_LIVRE)
             EE02_NR_MATRICULA = DoBanco(dr("EE02_NR_MATRICULA"), eTipoValor.TEXTO)
             EE02_DS_EMAIL = DoBanco(dr("EE02_DS_EMAIL"), eTipoValor.TEXTO)
             EE02_DT_NASCIMENTO = DoBanco(dr("EE02_DT_NASCIMENTO"), eTipoValor.DATA)
@@ -143,8 +143,8 @@ Public Class Professor
         End If
 
         dr("EE02_ID_PROFESSOR") = ProBanco(EE02_ID_PROFESSOR, eTipoValor.CHAVE)
-        dr("EE02_NM_NOME") = ProBanco(EE02_NM_NOME, eTipoValor.TEXTO)
-        dr("EE02_NM_NOME_EXIBICAO") = ProBanco(EE02_NM_NOME_EXIBICAO, eTipoValor.TEXTO)
+        dr("EE02_NM_NOME") = ProBanco(EE02_NM_NOME, eTipoValor.TEXTO_LIVRE)
+        dr("EE02_NM_NOME_EXIBICAO") = ProBanco(EE02_NM_NOME_EXIBICAO, eTipoValor.TEXTO_LIVRE)
         dr("EE02_NR_MATRICULA") = ProBanco(EE02_NR_MATRICULA, eTipoValor.TEXTO)
         dr("EE02_DS_EMAIL") = ProBanco(EE02_DS_EMAIL, eTipoValor.TEXTO)
         dr("EE02_DT_NASCIMENTO") = ProBanco(EE02_DT_NASCIMENTO, eTipoValor.DATA)

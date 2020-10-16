@@ -54,7 +54,7 @@ Public Class Cidade
             dr = dt.Rows(0)
 
             TG01_ID_CIDADE = DoBanco(dr("TG01_ID_CIDADE"), eTipoValor.CHAVE)
-            TG01_DS_CIDADE = DoBanco(dr("TG01_DS_CIDADE"), eTipoValor.TEXTO)
+            TG01_DS_CIDADE = DoBanco(dr("TG01_DS_CIDADE"), eTipoValor.TEXTO_LIVRE)
 
         End If
 

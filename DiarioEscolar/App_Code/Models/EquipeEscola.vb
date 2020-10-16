@@ -78,7 +78,7 @@ Public Class EquipeEscola
             EE01_ID_ESCOLA = DoBanco(dr("EE01_ID_ESCOLA"), eTipoValor.CHAVE)
             EE14_ID_MATRIZ = DoBanco(dr("EE14_ID_MATRIZ"), eTipoValor.CHAVE)
             EE06_DH_DATA = DoBanco(dr("EE06_DH_DATA"), eTipoValor.DATA_COMPLETA)
-            EE06_DS_EQUIPE_ESCOLA = DoBanco(dr("EE06_DS_EQUIPE_ESCOLA"), eTipoValor.TEXTO)
+            EE06_DS_EQUIPE_ESCOLA = DoBanco(dr("EE06_DS_EQUIPE_ESCOLA"), eTipoValor.TEXTO_LIVRE)
 
         End If
 
@@ -106,7 +106,7 @@ Public Class EquipeEscola
         dr("EE01_ID_ESCOLA") = ProBanco(EE01_ID_ESCOLA, eTipoValor.CHAVE)
         dr("EE14_ID_MATRIZ") = ProBanco(EE14_ID_MATRIZ, eTipoValor.CHAVE)
         dr("EE06_DH_DATA") = ProBanco(EE06_DH_DATA, eTipoValor.DATA)
-        dr("EE06_DS_EQUIPE_ESCOLA") = ProBanco(EE06_DS_EQUIPE_ESCOLA, eTipoValor.TEXTO)
+        dr("EE06_DS_EQUIPE_ESCOLA") = ProBanco(EE06_DS_EQUIPE_ESCOLA, eTipoValor.TEXTO_LIVRE)
 
 
         cnn.SalvarDataTable(dr)

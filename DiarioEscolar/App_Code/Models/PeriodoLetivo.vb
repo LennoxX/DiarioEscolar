@@ -65,8 +65,8 @@ Public Class PeriodoLetivo
             dr = dt.Rows(0)
             EE00_ID_PERIODO_LETIVO = DoBanco(dr("EE00_ID_PERIODO_LETIVO"), eTipoValor.CHAVE)
             EE01_ID_ESCOLA = DoBanco(dr("EE01_ID_ESCOLA"), eTipoValor.CHAVE)
-            EE00_DS_PERIODO_LETIVO = DoBanco(dr("EE00_DS_PERIODO_LETIVO"), eTipoValor.TEXTO)
-            EE00_NM_PERIODO_LETIVO = DoBanco(dr("EE00_NM_PERIODO_LETIVO"), eTipoValor.TEXTO)
+            EE00_DS_PERIODO_LETIVO = DoBanco(dr("EE00_DS_PERIODO_LETIVO"), eTipoValor.TEXTO_LIVRE)
+            EE00_NM_PERIODO_LETIVO = DoBanco(dr("EE00_NM_PERIODO_LETIVO"), eTipoValor.TEXTO_LIVRE)
         End If
 
     End Sub
@@ -91,8 +91,8 @@ Public Class PeriodoLetivo
 
         dr("EE00_ID_PERIODO_LETIVO") = ProBanco(EE00_ID_PERIODO_LETIVO, eTipoValor.CHAVE)
         dr("EE01_ID_ESCOLA") = ProBanco(EE01_ID_ESCOLA, eTipoValor.CHAVE)
-        dr("EE00_DS_PERIODO_LETIVO") = ProBanco(EE00_DS_PERIODO_LETIVO, eTipoValor.TEXTO)
-        dr("EE00_NM_PERIODO_LETIVO") = ProBanco(EE00_NM_PERIODO_LETIVO, eTipoValor.TEXTO)
+        dr("EE00_DS_PERIODO_LETIVO") = ProBanco(EE00_DS_PERIODO_LETIVO, eTipoValor.TEXTO_LIVRE)
+        dr("EE00_NM_PERIODO_LETIVO") = ProBanco(EE00_NM_PERIODO_LETIVO, eTipoValor.TEXTO_LIVRE)
 
         cnn.SalvarDataTable(dr)
 

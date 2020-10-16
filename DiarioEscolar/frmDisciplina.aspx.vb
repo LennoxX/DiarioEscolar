@@ -5,6 +5,7 @@
         If Not Page.IsPostBack Then
             CarregarGrid()
         End If
+        JavaScript.ExibirConfirmacao(btnSalvar, eTipoConfirmacao.SALVAR)
     End Sub
 
     Protected Sub btnSalvar_Click(sender As Object, e As EventArgs)

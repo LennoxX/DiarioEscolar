@@ -44,7 +44,7 @@ Public Class Disciplina
             dr = dt.Rows(0)
 
             EE11_ID_DISCIPLINA = DoBanco(dr("EE11_ID_DISCIPLINA"), eTipoValor.CHAVE)
-            EE11_DS_DISCIPLINA = DoBanco(dr("EE11_DS_DISCIPLINA"), eTipoValor.TEXTO)
+            EE11_DS_DISCIPLINA = DoBanco(dr("EE11_DS_DISCIPLINA"), eTipoValor.TEXTO_LIVRE)
         End If
 
     End Sub
@@ -81,7 +81,7 @@ Public Class Disciplina
         End If
 
         dr("EE11_ID_DISCIPLINA") = ProBanco(EE11_ID_DISCIPLINA, eTipoValor.CHAVE)
-        dr("EE11_DS_DISCIPLINA") = ProBanco(EE11_DS_DISCIPLINA, eTipoValor.TEXTO)
+        dr("EE11_DS_DISCIPLINA") = ProBanco(EE11_DS_DISCIPLINA, eTipoValor.TEXTO_LIVRE)
 
         cnn.SalvarDataTable(dr)
 

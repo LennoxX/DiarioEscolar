@@ -7,6 +7,7 @@
             CarregarGrid()
             CarregarComboTipoAtividade()
         End If
+        JavaScript.ExibirConfirmacao(btnSalvar, eTipoConfirmacao.SALVAR)
     End Sub
 
     Private Sub CarregarComboTipoAtividade()
@@ -95,6 +96,10 @@
                 lnkExcluirAtividade = DirectCast(e.Row.Cells(2).FindControl("lnkExcluirAtividade"), LinkButton)
                 lnkExcluirAtividade.CommandArgument = e.Row.RowIndex
 
+                Dim lnkNotasAtividade As New LinkButton
+                lnkNotasAtividade = DirectCast(e.Row.Cells(2).FindControl("lnkNotasAtividade"), LinkButton)
+                lnkNotasAtividade.CommandArgument = e.Row.RowIndex
+
 
         End Select
     End Sub
@@ -106,6 +111,8 @@
             Editar(grdAtividades.DataKeys(e.CommandArgument).Item(0))
         ElseIf e.CommandName = "EXCLUIR" Then
             Excluir(grdAtividades.DataKeys(e.CommandArgument).Item(0))
+        ElseIf e.CommandName = "NOTAS" Then
+            Response.Redirect("frmNotasAtividade.aspx?idAtividade=" + grdAtividades.DataKeys(e.CommandArgument).Item(0).ToString())
         End If
     End Sub
 

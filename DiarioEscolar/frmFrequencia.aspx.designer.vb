@@ -41,15 +41,6 @@ Partial Public Class frmFrequencia
     Protected WithEvents grdAluno As Global.System.Web.UI.WebControls.GridView
 
     '''<summary>
-    '''Controle RepterDetails.
-    '''</summary>
-    '''<remarks>
-    '''Campo gerado automaticamente.
-    '''Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-    '''</remarks>
-    Protected WithEvents RepterDetails As Global.System.Web.UI.WebControls.Repeater
-
-    '''<summary>
     '''Controle btnSalvar.
     '''</summary>
     '''<remarks>

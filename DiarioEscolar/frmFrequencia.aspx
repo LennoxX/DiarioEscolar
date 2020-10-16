@@ -53,22 +53,7 @@
                                 </ItemTemplate>
                             </asp:TemplateField>
                         </Columns>
-                    </asp:GridView>
-                    <!--
-                    <table class="table table-bordered">
-                        <thead>
-                            <tr class="d-flex">
-                                <th class="col-sm-8">Nome</th>
-                                <th class="col-sm-4">Presença</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <asp:Repeater ID="RepterDetails" runat="server">
-                               
-                            </asp:Repeater>
-                        </tbody>
-                    </table> 
-    -->
+                    </asp:GridView>                   
                 </div>
                 <div class="card-footer">
                     <asp:Button runat="server" OnClick="btnSalvar_Click" ID="btnSalvar" CssClass="btn btn-lg btn-success float-right" Text="Salvar" />

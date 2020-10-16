@@ -2,26 +2,30 @@
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        CarregarInfo()
         If Not Page.IsPostBack Then
-            If (Request.QueryString("idEscola") Is Nothing) Then
-                Response.Redirect("frmEscola.aspx")
-            End If
-            Try
-                Dim idEscola As Integer = Request.QueryString("idEscola")
-                CarregarInfo(idEscola)
-            Catch ex As Exception
-                Response.Redirect("frmEscola.aspx")
-            End Try
             CarregarGrid()
         End If
+        JavaScript.ExibirConfirmacao(btnSalvar, eTipoConfirmacao.SALVAR)
     End Sub
 
-    Private Sub CarregarInfo(idEscola As Integer)
-        ViewState("idEscola") = idEscola
+    Private Sub CarregarInfo()
+
+        Dim idEscola As Integer
+        Try
+            idEscola = Request.QueryString("idEscola")
+            ViewState("idEscola") = idEscola
+        Catch ex As Exception
+            Response.Redirect("frmEscola.aspx")
+        End Try
+
         Dim objEscola = New Escola(idEscola)
-        txtNomeEscola.Text = objEscola.Nome
-        Dim objSituacao As New TipoSituacao(objEscola.CodigoSituacao)
-        Dim objCidade As New Cidade(objEscola.CodigoCidade)
+
+        If (objEscola.Codigo > 0) Then
+            txtNomeEscola.Text = objEscola.Nome
+        Else
+            Response.Redirect("frmEscola.aspx")
+        End If
     End Sub
 
     Protected Sub btnSalvar_Click(sender As Object, e As EventArgs)
@@ -50,17 +54,15 @@
         Else
             objPeriodoLetivo = New PeriodoLetivo
         End If
-        Try
-            With objPeriodoLetivo
+
+        With objPeriodoLetivo
                 .Descricao = txtDescricaoPeriodo.Text
                 .Nome = txtNomePeriodo.Text
                 .CodigoEscola = ViewState("idEscola")
                 .Salvar()
             End With
             MsgBox(eTipoMensagem.SALVAR_SUCESSO)
-        Catch ex As Exception
-            MsgBox(eTipoMensagem.SALVAR_ERRO)
-        End Try
+
     End Sub
 
     Protected Sub grdPeriodos_RowDataBound(sender As Object, e As GridViewRowEventArgs) Handles grdPeriodos.RowDataBound
